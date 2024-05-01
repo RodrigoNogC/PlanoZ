@@ -35,7 +35,7 @@ let getRandomPokemon = async () => {
 };
 
 let searchPokemon = async () => {
-  cardContainer.innerHTML = ''; // Limpar cartões existentes
+  cardContainer.innerHTML = '';
 
   const searchTerm = searchInput.value.toLowerCase().trim();
   
@@ -68,7 +68,7 @@ let createCardElement = (name, imgSrc, hp, attack, defense, speed, color, types)
   card.className = "poke-card";
   card.innerHTML = `
     <p class="hp"><span>HP</span>${hp}</p>
-    <img src="${imgSrc}" />
+    <img class="pokemon" s src="${imgSrc}" />
     <h2 class="poke-name">${name}</h2>
     <div class="types">
       ${types.map(type => `<span style="background-color: ${typeColor[type.type.name]}">${type.type.name}</span>`).join('')}
@@ -90,12 +90,10 @@ let displayErrorCard = () => {
   cardContainer.appendChild(errorCard);
 };
 
-// Exibir um Pokémon aleatório ao carregar a página
 getRandomPokemon();
 
 btn.addEventListener("click", searchPokemon);
 
-// Permitir pesquisar ao pressionar Enter no campo de entrada
 searchInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     searchPokemon();

@@ -1,18 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokemon Card Generator</title>
+  <title>Pokémon Cards</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./imgs/favicom.png" type="image/x-icon">
 </head>
 <body>
-  <div class="container">
-    <input id="search-input" type="text" placeholder="Digite o nome ou ID do Pokémon" class="search-input">
-    <button id="btn" class="search-btn">Pesquisar Pokémon</button>
-    <div id="card-container" class="card-container"></div>
-  </div>
+
+  <header>
+
+
+    <nav class="nav-bar">
+          <a href="#">DUELO</a>
+          <a href="#">POKÉMONS</a>
+          <a href="#">CAMPEONATO</a>
+
+          <img class="logo" src="./imgs/logo.png" alt="logo">
+            
+          <a href="">POKÉDEX</a>
+          <a href="#">LOJA</a>
+          <a href="#">AJUDA</a>     
+    </nav>
+  </header>
+
+  <main>
+
+      <div class="container">
+      <input id="search-input" type="text" placeholder="Digite o nome ou ID do Pokémon">
+      <button id="btn">Pesquisar Pokémon</button>
+      <div id="card-container" class="card-container">
+      </div>
+      </div>
+  </main>
+
+  <footer>
+    <p>Desenvolvido Por Rodrigo Carvalho e Diego Mota</p>
+  </footer>
+
   <script src="script.js"></script>
+
 </body>
+
 </html>
